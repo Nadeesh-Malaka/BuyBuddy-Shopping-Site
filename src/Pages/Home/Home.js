@@ -2,9 +2,10 @@
 import React, { useState } from 'react';
 import Headers from '../../Components/Header/Header';
 import ProductCard from '../../Components/ProductCard/ProductCard';
+import WhyShop from '../../Components/WhyShop/WhyShop';
+import Footer from '../../Components/Footer/Footer';
 import { mockProducts } from '../../data/products';
 import './Home.css';
-import Footer from '../../Components/Footer/Footer';
 
 function Home({ addToCart }) {
   const [products] = useState(mockProducts);
@@ -44,7 +45,8 @@ function Home({ addToCart }) {
           ))}
         </div>
       </div>
-      <Footer/>
+      <WhyShop />
+      <Footer />
     </div>
   );
 }
