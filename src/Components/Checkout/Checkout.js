@@ -1,13 +1,13 @@
 // src/Components/Checkout/Checkout.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Add useNavigate
 import { useCart } from '../../context/CartContext';
 import './Checkout.css';
 
 function Checkout() {
   const { cartItems, clearCart } = useCart();
+  const navigate = useNavigate(); // Add navigate hook
 
-  // Form state for shipping and payment information
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -22,30 +22,24 @@ function Checkout() {
     cvv: '',
   });
 
-  // Handle form input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Calculate order summary
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   const shipping = 10.00;
-  const tax = subtotal * 0.07; // 7% tax
+  const tax = subtotal * 0.07;
   const total = subtotal + shipping + tax;
 
-  // Handle form submission (Place Order)
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Basic validation (you can expand this)
     if (!formData.firstName || !formData.email || !formData.cardNumber) {
       alert('Please fill in all required fields.');
       return;
     }
-    // Simulate placing the order
-    alert('Order placed successfully!');
-    clearCart(); // Clear the cart after placing the order
-    // Optionally redirect to a confirmation page (future step)
+    clearCart();
+    navigate('/order-confirmation'); // Redirect to order confirmation
   };
 
   return (
@@ -57,7 +51,6 @@ function Checkout() {
         <h2>Checkout</h2>
       </div>
       <div className="checkout-body">
-        {/* Shipping and Payment Information */}
         <div className="checkout-form">
           <h5>Shipping Information</h5>
           <form onSubmit={handleSubmit}>
@@ -195,7 +188,6 @@ function Checkout() {
           </form>
         </div>
 
-        {/* Order Summary */}
         <div className="checkout-summary">
           <h5>Order Summary</h5>
           {cartItems.map(item => (

@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
 import CartPage from './Pages/Cart/CartPage';
-import CheckoutPage from './Pages/Checkout/CheckoutPage'; 
+import CheckoutPage from './Pages/Checkout/CheckoutPage';
+import OrderConfirmationPage from './Pages/OrderConfirmation/OrderConfirmationPage'; // Import OrderConfirmationPage
 import { CartProvider } from './context/CartContext';
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cart" element={<CartPage />} />
-              <Route path="/checkout" element={<CheckoutPage />} /> {/* Add checkout route */}
+              <Route path="/checkout" element={<CheckoutPage />} />
+              <Route path="/order-confirmation" element={<OrderConfirmationPage />} /> {/* Add order confirmation route */}
               <Route path="/categories" element={<div>Categories Page (TBD)</div>} />
               <Route path="/deals" element={<div>Deals Page (TBD)</div>} />
             </Routes>
