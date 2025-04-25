@@ -4,6 +4,7 @@ import Headers from '../../Components/Header/Header';
 import ProductCard from '../../Components/ProductCard/ProductCard';
 import { mockProducts } from '../../data/products';
 import './Home.css';
+import Footer from '../../Components/Footer/Footer';
 
 function Home({ addToCart }) {
   const [products] = useState(mockProducts);
@@ -43,6 +44,7 @@ function Home({ addToCart }) {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
