@@ -1,4 +1,4 @@
- 
+
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // For Bootstrap Icons
 import './ProductCard.css';
@@ -10,15 +10,12 @@ function ProductCard({ product, addToCart }) {
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
 
-    // Full stars
     for (let i = 0; i < fullStars; i++) {
       stars.push(<i key={`full-${i}`} className="bi bi-star-fill"></i>);
     }
-    // Half star if applicable
     if (hasHalfStar && stars.length < 5) {
       stars.push(<i key="half" className="bi bi-star-half"></i>);
     }
-    // Empty stars
     while (stars.length < 5) {
       stars.push(<i key={`empty-${stars.length}`} className="bi bi-star"></i>);
     }
