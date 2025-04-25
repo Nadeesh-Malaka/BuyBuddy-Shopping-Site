@@ -1,14 +1,14 @@
 // src/Components/Cart/Cart.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Add useNavigate
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useCart } from '../../context/CartContext';
 import './Cart.css';
 
 function Cart() {
   const { cartItems, updateQuantity, removeFromCart, clearCart } = useCart();
+  const navigate = useNavigate(); // Add navigate hook
 
-  // Calculate summary values
   const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   const shipping = 10.00;
   const tax = subtotal * 0.07;
@@ -84,7 +84,12 @@ function Cart() {
                 <span>Total</span>
                 <span>${total.toFixed(2)}</span>
               </div>
-              <button className="btn btn-primary w-100">Proceed to Checkout</button>
+              <button
+                className="btn btn-primary w-100"
+                onClick={() => navigate('/checkout')} // Redirect to checkout
+              >
+                Proceed to Checkout
+              </button>
               {remainingForFreeShipping > 0 && (
                 <p className="free-shipping-message">
                   Add ${remainingForFreeShipping.toFixed(2)} more to get free shipping!
