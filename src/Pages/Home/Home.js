@@ -5,10 +5,12 @@ import ProductCard from '../../Components/ProductCard/ProductCard';
 import WhyShop from '../../Components/WhyShop/WhyShop';
 import Footer from '../../Components/Footer/Footer';
 import { mockProducts } from '../../data/products';
+import { useCart } from '../../context/CartContext';
 import './Home.css';
 
-function Home({ addToCart }) {
+function Home() {
   const [products] = useState(mockProducts);
+  const { addToCart } = useCart();
 
   return (
     <div className="home">

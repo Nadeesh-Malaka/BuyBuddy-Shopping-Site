@@ -1,10 +1,13 @@
-// src/components/Navbar/Navbar.js
+// src/Components/Navbar/Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap for layout
+import { useCart } from '../../context/CartContext'; // Import useCart
 import './Navbar.css'; // Custom CSS
 
-function Navbar({ cartItems }) {
+function Navbar() {
+  const { cartItems } = useCart(); // Get cartItems from context
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container navbar-container">
