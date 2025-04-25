@@ -4,7 +4,8 @@ import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
 import CartPage from './Pages/Cart/CartPage';
 import CheckoutPage from './Pages/Checkout/CheckoutPage';
-import OrderConfirmationPage from './Pages/OrderConfirmation/OrderConfirmationPage'; // Import OrderConfirmationPage
+import OrderConfirmationPage from './Pages/OrderConfirmation/OrderConfirmationPage';
+import ProductDetailPage from './Pages/ProductDetail/ProductDetailPage'; // Import ProductDetailPage
 import { CartProvider } from './context/CartContext';
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
-              <Route path="/order-confirmation" element={<OrderConfirmationPage />} /> {/* Add order confirmation route */}
+              <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
+              <Route path="/product/:id" element={<ProductDetailPage />} /> {/* Add product detail route */}
               <Route path="/categories" element={<div>Categories Page (TBD)</div>} />
               <Route path="/deals" element={<div>Deals Page (TBD)</div>} />
             </Routes>
