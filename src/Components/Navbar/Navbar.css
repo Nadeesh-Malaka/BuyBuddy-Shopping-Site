@@ -1,0 +1,118 @@
+/* src/components/Navbar/Navbar.css */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3b5bdb; /* Matches ShopMini's blue */
+    text-decoration: none; 
+    margin-right: 400px; 
+  }
+  
+  .navbar-collapse {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Spacing between links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin: 0;
+  }
+  
+  .navbar-links a {
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #3b5bdb;
+  }
+  
+  .navbar-search {
+    flex-grow: 1; /* Prevents search bar from taking too much space */
+    margin: 0 20px;
+  }
+  
+  .navbar-search input {
+    width: 200px; /* Compact width to match ShopMini */
+    border-radius: 20px;
+    border: 1px solid #d1d5db;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spacing between cart and user icons */
+  }
+  
+  .navbar-cart, .navbar-user {
+    position: relative;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .navbar-cart i, .navbar-user i {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-cart .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #3b5bdb;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .navbar-search {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .navbar-search input {
+      width: 100%;
+    }
+  
+    .navbar-icons {
+      margin-top: 10px;
+    }
+  }
