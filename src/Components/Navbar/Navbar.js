@@ -8,6 +8,10 @@ import './Navbar.css'; // Custom CSS
 function Navbar() {
   const { cartItems } = useCart(); // Get cartItems from context
 
+  // Placeholder for user login state (to be implemented after backend)
+  // Replace this with actual authentication state (e.g., from a context or Redux)
+  const isLoggedIn = false; // Temporary placeholder
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container navbar-container">
@@ -55,7 +59,7 @@ function Navbar() {
               <i className="bi bi-cart"></i>
               <span className="badge">{cartItems ? cartItems.length : 0}</span>
             </Link>
-            <Link to="/profile" className="navbar-user">
+            <Link to={isLoggedIn ? "/profile" : "/login"} className="navbar-user">
               <i className="bi bi-person"></i>
             </Link>
           </div>
