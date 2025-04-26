@@ -1,5 +1,5 @@
 // src/Components/Navbar/Navbar.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap for layout
 import { useCart } from '../../context/CartContext'; // Import useCart
@@ -8,9 +8,29 @@ import './Navbar.css'; // Custom CSS
 function Navbar() {
   const { cartItems } = useCart(); // Get cartItems from context
 
-  // Placeholder for user login state (to be implemented after backend)
-  // Replace this with actual authentication state (e.g., from a context or Redux)
-  const isLoggedIn = false; // Temporary placeholder
+  // Simulate user logged in (to be replaced with actual auth logic after backend setup)
+  const [isLoggedIn, setIsLoggedIn] = useState(true); // Set to true to test logged-in state
+  const user = {
+    profilePic: 'https://randomuser.me/api/portraits/men/1.jpg', // Placeholder image
+    email: 'john@example.com',
+  };
+
+  // State for dropdown menu
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  // Function to toggle dropdown
+  const toggleDropdown = () => {
+    console.log("Toggling dropdown, current state:", isDropdownOpen); // Debug log
+    setIsDropdownOpen((prev) => !prev);
+  };
+
+  // Function to handle logout (to be implemented with backend)
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setIsDropdownOpen(false);
+    console.log("User logged out");
+    // Add logout logic here (e.g., clear auth token, redirect to login)
+  };
 
   return (
     <nav className="navbar navbar-expand-lg">
@@ -59,9 +79,41 @@ function Navbar() {
               <i className="bi bi-cart"></i>
               <span className="badge">{cartItems ? cartItems.length : 0}</span>
             </Link>
-            <Link to={isLoggedIn ? "/profile" : "/login"} className="navbar-user">
-              <i className="bi bi-person"></i>
-            </Link>
+            {isLoggedIn ? (
+              <div className="navbar-user-dropdown">
+                <img
+                  src={user.profilePic}
+                  alt="Profile"
+                  className="navbar-profile-pic"
+                  onClick={toggleDropdown} // Use named function for clarity
+                  style={{ cursor: 'pointer' }} // Ensure cursor indicates clickable
+                />
+                {isDropdownOpen && (
+                  <div className="navbar-dropdown-menu">
+                    <p className="navbar-dropdown-email">{user.email}</p>
+                    <Link to="/profile" onClick={() => setIsDropdownOpen(false)}>
+                      Your Profile
+                    </Link>
+                    <Link to="/addresses" onClick={() => setIsDropdownOpen(false)}>
+                      Addresses
+                    </Link>
+                    <Link to="/payment-methods" onClick={() => setIsDropdownOpen(false)}>
+                      Payment Methods
+                    </Link>
+                    <Link to="/order-history" onClick={() => setIsDropdownOpen(false)}>
+                      Order History
+                    </Link>
+                    <button className="navbar-logout-btn" onClick={handleLogout}>
+                      Sign Out
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link to="/login" className="navbar-user">
+                <i className="bi bi-person"></i>
+              </Link>
+            )}
           </div>
         </div>
       </div>

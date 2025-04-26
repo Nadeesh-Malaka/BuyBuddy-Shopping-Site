@@ -8,8 +8,12 @@ import OrderConfirmationPage from './Pages/OrderConfirmation/OrderConfirmationPa
 import ProductDetailPage from './Pages/ProductDetail/ProductDetailPage';
 import CategoriesPage from './Pages/Categories/CategoriesPage';
 import DealsPage from './Pages/Deals/DealsPage';
-import LoginPage from './Pages/Login/LoginPage'; // Import LoginPage
-import SignUpPage from './Pages/SignUp/SignUpPage'; // Import SignUpPage
+import LoginPage from './Pages/Login/LoginPage';
+import SignUpPage from './Pages/SignUp/SignUpPage';
+import ProfilePage from './Pages/Profile/ProfilePage';
+import AddressesPage from './Pages/Addresses/AddressesPage'; // Import AddressesPage
+import PaymentMethodsPage from './Pages/PaymentMethods/PaymentMethodsPage'; // Import PaymentMethodsPage
+import OrderHistoryPage from './Pages/OrderHistory/OrderHistoryPage'; // Import OrderHistoryPage
 import { CartProvider } from './context/CartContext';
 
 function App() {
@@ -29,6 +33,10 @@ function App() {
               <Route path="/deals" element={<DealsPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/signup" element={<SignUpPage />} />
+              <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/addresses" element={<AddressesPage />} />
+              <Route path="/payment-methods" element={<PaymentMethodsPage />} />
+              <Route path="/order-history" element={<OrderHistoryPage />} />
             </Routes>
           </main>
         </div>
