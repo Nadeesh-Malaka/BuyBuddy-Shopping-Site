@@ -6,7 +6,8 @@ import CartPage from './Pages/Cart/CartPage';
 import CheckoutPage from './Pages/Checkout/CheckoutPage';
 import OrderConfirmationPage from './Pages/OrderConfirmation/OrderConfirmationPage';
 import ProductDetailPage from './Pages/ProductDetail/ProductDetailPage';
-import CategoriesPage from './Pages/Categories/CategoriesPage'; // Import CategoriesPage
+import CategoriesPage from './Pages/Categories/CategoriesPage';
+import DealsPage from './Pages/Deals/DealsPage'; // Import DealsPage
 import { CartProvider } from './context/CartContext';
 
 function App() {
@@ -22,8 +23,8 @@ function App() {
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
               <Route path="/product/:id" element={<ProductDetailPage />} />
-              <Route path="/categories" element={<CategoriesPage />} /> {/* Update to use CategoriesPage */}
-              <Route path="/deals" element={<div>Deals Page (TBD)</div>} />
+              <Route path="/categories" element={<CategoriesPage />} />
+              <Route path="/deals" element={<DealsPage />} />
             </Routes>
           </main>
         </div>
