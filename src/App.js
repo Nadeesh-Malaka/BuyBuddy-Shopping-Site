@@ -7,7 +7,9 @@ import CheckoutPage from './Pages/Checkout/CheckoutPage';
 import OrderConfirmationPage from './Pages/OrderConfirmation/OrderConfirmationPage';
 import ProductDetailPage from './Pages/ProductDetail/ProductDetailPage';
 import CategoriesPage from './Pages/Categories/CategoriesPage';
-import DealsPage from './Pages/Deals/DealsPage'; // Import DealsPage
+import DealsPage from './Pages/Deals/DealsPage';
+import LoginPage from './Pages/Login/LoginPage'; // Import LoginPage
+import SignUpPage from './Pages/SignUp/SignUpPage'; // Import SignUpPage
 import { CartProvider } from './context/CartContext';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
               <Route path="/product/:id" element={<ProductDetailPage />} />
               <Route path="/categories" element={<CategoriesPage />} />
               <Route path="/deals" element={<DealsPage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/signup" element={<SignUpPage />} />
             </Routes>
           </main>
         </div>
