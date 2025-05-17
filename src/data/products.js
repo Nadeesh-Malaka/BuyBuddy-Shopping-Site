@@ -1,6 +1,6 @@
 // src/data/products.js
 export const mockProducts = [
-  { id: 1, category: "Accessories", reviews: 55, stock: 25, name: "Wireless Bluetooth Headphones", description: "High-quality wireless headphones with noise cancellation and 20-hour battery", price: 129.99, originalPrice: 129.99, rating: 4.5, image: require('../assets/headphones.jpg'), discountPercentage: 29 },
+  { id: 1, category: "Accessories", reviews: 55, stock: 25, name: "Wireless Bluetooth Headphones", description: "High-quality wireless headphones with noise cancellation and 20-hour battery", price: 129.99, originalPrice: 92.29, rating: 4.5, image: require('../assets/headphones.jpg'), discountPercentage: 29 },
   { id: 2, category: "Electronics", reviews: 22, stock: 25, name: "Smartphone Stand & Holder", description: "Adjustable smartphone stand compatible with all models and sizes", price: 24.99, originalPrice: 24.99, rating: 4.2, image: require('../assets/phone-stand.jpg'), discountPercentage: 10 },
   { id: 3, category: "Electronics", reviews: 74, stock: 25, name: "Smart Watch", description: "Fitness tracker with heart rate monitor, sleep tracking, and smartphone notifications", price: 89.99, originalPrice: 89.99, rating: 4.7, image: require('../assets/smartwatch.jpg'), discountPercentage: 20 },
   { id: 4, category: "Electronics", reviews: 544, stock: 25, name: "Portable Power Bank", description: "20000mAh high-capacity portable charger with fast charging capability", price: 49.99, originalPrice: 49.99, rating: 4.4, image: require('../assets/powerbank.jpg'), discountPercentage: 17 },

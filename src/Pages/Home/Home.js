@@ -15,7 +15,7 @@ function Home() {
   return (
     <div className="home">
       <Headers />
-      <div className="products-section">
+      <div className="products-section" id='products'>
         <div className="products-header">
           <h4>Products</h4>
           <div className="products-controls">
