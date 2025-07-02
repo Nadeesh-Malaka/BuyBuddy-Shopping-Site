@@ -1,5 +1,5 @@
 // src/Pages/Profile/ProfilePage.js
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import './ProfilePage.css';
@@ -11,12 +11,6 @@ function ProfilePage() {
     email: 'john@example.com',
     phoneNumber: '+1 234 567 8900',
     profilePic: 'https://randomuser.me/api/portraits/men/1.jpg', // Placeholder image
-  };
-
-  // Function to handle logout (to be implemented with backend)
-  const handleLogout = () => {
-    console.log("User logged out");
-    // Add logout logic here (e.g., clear auth token, redirect to login)
   };
 
   return (
