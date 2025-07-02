@@ -113,7 +113,7 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
 - Inspiration from e-commerce platforms like ShopMini and Amazon.
 
 ## Contact
-For questions or collaboration, reach out to [your-email@example.com](mailto:nadeeshmalaka50@gmail.com).
+For questions or collaboration, reach out to [nadeeshmalaka50@gmail.com](mailto:nadeeshmalaka50@gmail.com).
 
 ---
 
