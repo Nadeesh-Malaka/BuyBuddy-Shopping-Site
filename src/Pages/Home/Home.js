@@ -24,9 +24,9 @@ function Home() {
                 All
               </button>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">All</a></li>
-                <li><a className="dropdown-item" href="#">Electronics</a></li>
-                <li><a className="dropdown-item" href="#">Accessories</a></li>
+                <li><a className="dropdown-item" href="/all">All</a></li>
+                <li><a className="dropdown-item" href="/electronics">Electronics</a></li>
+                <li><a className="dropdown-item" href="/accessories">Accessories</a></li>
               </ul>
             </div>
             <div className="dropdown ms-2">
@@ -34,9 +34,9 @@ function Home() {
                 Sort by: Featured
               </button>
               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Featured</a></li>
-                <li><a className="dropdown-item" href="#">Price: Low to High</a></li>
-                <li><a className="dropdown-item" href="#">Price: High to Low</a></li>
+                <li><a className="dropdown-item" href="/Featured">Featured</a></li>
+                <li><a className="dropdown-item" href="/Price_low">Price: Low to High</a></li>
+                <li><a className="dropdown-item" href="/Price_high">Price: High to Low</a></li>
               </ul>
             </div>
           </div>
