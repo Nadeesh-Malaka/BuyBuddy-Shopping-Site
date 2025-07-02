@@ -4,6 +4,8 @@
 ## Project Description
 BuyBuddy is an innovative e-commerce web application designed to provide users with a seamless shopping experience. The platform allows users to browse a wide variety of products, manage their shopping carts, place orders, and track their purchase history. Built with a modern tech stack, BuyBuddy aims to offer an intuitive interface, robust backend functionality, and secure user authentication.
 
+👉 **Live Demo:** [BuyBuddy on Netlify](https://buybuddy-shopping-site.netlify.app/)
+
 ### Key Features
 - **User Authentication**: Secure signup and login functionality with email and password management.
 - **Product Browsing**: Explore products categorized into sections like Electronics and Accessories, with filtering and sorting options.
