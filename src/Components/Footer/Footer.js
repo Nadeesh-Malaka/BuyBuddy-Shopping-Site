@@ -16,9 +16,9 @@ function Footer() {
         <div className="footer-section">
           <h5>Shop</h5>
           <ul>
-            <li><a href="#">All Products</a></li>
-            <li><a href="#">Deals</a></li>
-            <li><a href="#">New Arrivals</a></li>
+            <li><a href="/prodcuts">All Products</a></li>
+            <li><a href="/deals">Deals</a></li>
+            <li><a href="/new_Arrivals">New Arrivals</a></li>
           </ul>
         </div>
 
@@ -26,9 +26,9 @@ function Footer() {
         <div className="footer-section">
           <h5>Support</h5>
           <ul>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Shipping</a></li>
+            <li><a href="/Contact Us">Contact Us</a></li>
+            <li><a href="/faq">FAQs</a></li>
+            <li><a href="/Shipping">Shipping</a></li>
           </ul>
         </div>
 
